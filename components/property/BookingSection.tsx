@@ -1,0 +1,14 @@
+export default function BookingSection({ price }: { price: number }) {
+  return (
+    <div className="sticky top-4 border rounded-2xl shadow-lg p-6 space-y-4">
+      <div className="flex items-baseline justify-between">
+        <h3 className="text-2xl font-bold">${price}</h3>
+        <span className="text-gray-600">/ night</span>
+      </div>
+
+      <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+        Book Now
+      </button>
+    </div>
+  );
+}
