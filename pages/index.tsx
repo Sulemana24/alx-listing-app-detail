@@ -1,15 +1,21 @@
-import React, { useState } from 'react';
-import { PROPERTYLISTINGSAMPLE } from '@/constants';
-import { PropertyProps } from '@/interfaces';
+import Link from "next/link";
+import React, { useState } from "react";
+import { PROPERTYLISTINGSAMPLE } from "@/constants";
+import { PropertyProps } from "@/interfaces";
+import ima from "../public/images/image 2.png";
 
-const Pill: React.FC<{ label: string; isActive: boolean; onClick: () => void }> = ({ label, isActive, onClick }) => {
+const Pill: React.FC<{
+  label: string;
+  isActive: boolean;
+  onClick: () => void;
+}> = ({ label, isActive, onClick }) => {
   return (
     <button
       onClick={onClick}
       className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
         isActive
-          ? 'bg-blue-600 text-white'
-          : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+          ? "bg-[#FF4FA1] text-white"
+          : "bg-gray-200 text-gray-700 hover:bg-gray-300"
       }`}
     >
       {label}
@@ -21,31 +27,41 @@ const PropertyCard: React.FC<{ property: PropertyProps }> = ({ property }) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
       <div className="relative">
-        <img
-          src={property.image}
-          alt={property.name}
-          className="w-full h-48 object-cover"
-        />
+        <Link href={`/property/${property.name}`} passHref>
+          <img
+            src={property.image}
+            alt={property.name}
+            className="w-full h-48 object-cover"
+          />
+        </Link>
         {property.discount && (
-          <div className="absolute top-3 right-3 bg-red-500 text-white px-2 py-1 rounded text-sm font-medium">
+          <div className="absolute top-3 right-3 bg-[#FF4FA1] text-white px-2 py-1 rounded text-sm font-medium">
             -{property.discount}%
           </div>
         )}
       </div>
       <div className="p-4">
         <div className="flex justify-between items-start mb-2">
-          <h3 className="text-lg font-semibold text-gray-900">{property.name}</h3>
+          <h3 className="text-lg font-semibold text-gray-900">
+            {property.name}
+          </h3>
           <div className="flex items-center">
             <span className="text-yellow-400">★</span>
-            <span className="text-sm text-gray-600 ml-1">{property.rating}</span>
+            <span className="text-sm text-gray-600 ml-1">
+              {property.rating}
+            </span>
           </div>
         </div>
         <p className="text-gray-600 text-sm mb-2">
-          {property.address.city}, {property.address.state}, {property.address.country}
+          {property.address.city}, {property.address.state},{" "}
+          {property.address.country}
         </p>
         <div className="flex flex-wrap gap-1 mb-3">
           {property.category.slice(0, 2).map((cat, index) => (
-            <span key={index} className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
+            <span
+              key={index}
+              className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded"
+            >
               {cat}
             </span>
           ))}
@@ -67,7 +83,7 @@ const PropertyCard: React.FC<{ property: PropertyProps }> = ({ property }) => {
           </div>
           <div className="text-right">
             <div className="text-lg font-bold text-gray-900">
-              ${property.price.toLocaleString()}
+              Ghc{property.price.toLocaleString()}
             </div>
             <div className="text-sm text-gray-500">per night</div>
           </div>
@@ -78,32 +94,45 @@ const PropertyCard: React.FC<{ property: PropertyProps }> = ({ property }) => {
 };
 
 const Home: React.FC = () => {
-  const [activeFilter, setActiveFilter] = useState<string>('All');
+  const [activeFilter, setActiveFilter] = useState<string>("All");
 
   const filters = [
-    'All',
-    'Top Villa',
-    'Self Checkin',
-    'Free Parking',
-    'Pet Friendly',
-    'Pool',
-    'Mountain View',
-    'Beachfront'
+    "All",
+    "Top Villa",
+    "Self Checkin",
+    "Free Parking",
+    "Pet Friendly",
+    "Pool",
+    "Mountain View",
+    "Beachfront",
   ];
 
-  const filteredProperties = activeFilter === 'All'
-    ? PROPERTYLISTINGSAMPLE
-    : PROPERTYLISTINGSAMPLE.filter(property =>
-        property.category.some(cat =>
-          cat.toLowerCase().includes(activeFilter.toLowerCase().replace('top ', '').replace('free ', ''))
-        )
-      );
+  const filteredProperties =
+    activeFilter === "All"
+      ? PROPERTYLISTINGSAMPLE
+      : PROPERTYLISTINGSAMPLE.filter((property) =>
+          property.category.some((cat) =>
+            cat
+              .toLowerCase()
+              .includes(
+                activeFilter
+                  .toLowerCase()
+                  .replace("top ", "")
+                  .replace("free ", "")
+              )
+          )
+        );
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-600 to-purple-700 text-white">
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+      <section
+        className="relative bg-cover bg-center text-white"
+        style={{
+          backgroundImage: "url('/images/image 2.png')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black opacity-70"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -139,10 +168,13 @@ const Home: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-2">
-            {activeFilter === 'All' ? 'All Properties' : `${activeFilter} Properties`}
+            {activeFilter === "All"
+              ? "All Properties"
+              : `${activeFilter} Properties`}
           </h2>
           <p className="text-gray-600">
-            Showing {filteredProperties.length} of {PROPERTYLISTINGSAMPLE.length} properties
+            Showing {filteredProperties.length} of{" "}
+            {PROPERTYLISTINGSAMPLE.length} properties
           </p>
         </div>
 

@@ -6,7 +6,7 @@ export default function BookingSection({ price }: { price: number }) {
         <span className="text-gray-600">/ night</span>
       </div>
 
-      <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+      <button className="w-full bg-[#FF4FA1]  text-white py-2 rounded-lg hover:bg-[#00CFFF] transition">
         Book Now
       </button>
     </div>

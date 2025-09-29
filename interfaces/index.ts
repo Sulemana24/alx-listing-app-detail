@@ -15,4 +15,11 @@ export interface PropertyProps {
   };
   image: string;
   discount: string;
+  description?: string;
+  amenities?: string[];
+  reviews?: {
+    user: string;
+    comment: string;
+    rating: number;
+  }[];
 }

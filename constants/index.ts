@@ -1,12 +1,25 @@
-import { PropertyProps } from '@/interfaces';
+import { PropertyProps } from "@/interfaces";
+import img1 from "../public/images/Leonardo_Phoenix_Nestled_atop_a_rolling_hill_on_the_edge_of_to_0.jpg";
+import img2 from "../public/images/image 2.png";
+import img3 from "../public/images/Leonardo_Phoenix_Nestled_atop_a_rolling_hill_on_the_edge_of_to_2.jpg";
+import img4 from "../public/images/Leonardo_Phoenix_Nestled_atop_a_rolling_hill_on_the_edge_of_to_3.jpg";
+import img5 from "../public/images/pexels-asphotograpy-101808.jpg";
+import img6 from "../public/images/pexels-asphotograpy-565324.jpg";
+import img7 from "../public/images/pexels-expect-best-79873-323780.jpg";
+import img8 from "../public/images/pexels-frans-van-heerden-201846-1438832.jpg";
+import img9 from "../public/images/pexels-frans-van-heerden-201846-1438834.jpg";
+import img10 from "../public/images/pexels-godless-humanist-739743-1587947.jpg";
+import img11 from "../public/images/pexels-marketingtuig-87223.jpg";
+import img12 from "../public/images/pexels-nextvoyage-1481105.jpg";
+import img13 from "../public/images/pexels-pixabay-209296.jpg";
 
 export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
   {
     name: "Villa Ocean Breeze",
     address: {
-      state: "Seminyak",
-      city: "Bali",
-      country: "Indonesia"
+      state: "Northern Region",
+      city: "Yendi",
+      country: "Ghana",
     },
     rating: 4.89,
     category: ["Luxury Villa", "Pool", "Free Parking"],
@@ -14,35 +27,57 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
     offers: {
       bed: "3",
       shower: "3",
-      occupants: "4-6"
+      occupants: "4-6",
     },
-    image: "https://example.com/image1.jpg",
-    discount: ""
+    image: img1.src,
+    discount: "",
+    description:
+      "Experience the ultimate beachfront luxury at Villa Ocean Breeze. This stunning villa offers breathtaking ocean views, a private pool, and modern amenities to ensure a comfortable and memorable stay.",
+    amenities: ["Free WiFi", "Pool", "Air Conditioning", "Kitchen"],
+    reviews: [
+      { user: "Hawawu", comment: "Great place!", rating: 5 },
+      { user: "Maltiti", comment: "Very clean and cozy", rating: 4 },
+    ],
   },
   {
     name: "Mountain Escape Chalet",
     address: {
-      state: "Aspen",
-      city: "Colorado",
-      country: "USA"
+      state: "Ashanti Region",
+      city: "Kumasi",
+      country: "Ghana",
     },
-    rating: 4.70,
+    rating: 4.7,
     category: ["Mountain View", "Fireplace", "Self Checkin"],
     price: 1800,
     offers: {
       bed: "4",
       shower: "2",
-      occupants: "5-7"
+      occupants: "5-7",
     },
-    image: "https://example.com/image2.jpg",
-    discount: "30"
+    image: img2.src,
+    discount: "30",
+    description:
+      "Escape into the snowy mountains with this rustic yet modern chalet. Ideal for family ski trips, it offers a cozy fireplace and breathtaking views of Aspen’s peaks.",
+    amenities: ["Fireplace", "Free WiFi", "Heating", "Balcony", "Kitchen"],
+    reviews: [
+      {
+        user: "Issahaku",
+        comment: "The view from the balcony was unforgettable.",
+        rating: 5,
+      },
+      {
+        user: "Rahama",
+        comment: "Warm and cozy, loved the fireplace!",
+        rating: 4.5,
+      },
+    ],
   },
   {
     name: "Cozy Desert Retreat",
     address: {
-      state: "Palm Springs",
-      city: "California",
-      country: "USA"
+      state: "Northern Region",
+      city: "Tamale",
+      country: "Ghana",
     },
     rating: 4.92,
     category: ["Desert View", "Pet Friendly", "Self Checkin"],
@@ -50,17 +85,37 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
     offers: {
       bed: "2",
       shower: "1",
-      occupants: "2-3"
+      occupants: "2-3",
     },
-    image: "https://example.com/image3.jpg",
-    discount: ""
+    image: img3.src,
+    discount: "",
+    description:
+      "This desert retreat is perfect for those seeking peace and quiet. Watch the sunset over the desert mountains and enjoy a night under the stars.",
+    amenities: [
+      "Air Conditioning",
+      "Free Parking",
+      "Outdoor Lounge",
+      "Kitchen",
+    ],
+    reviews: [
+      {
+        user: "Abdulai",
+        comment: "Very peaceful, I slept so well.",
+        rating: 5,
+      },
+      {
+        user: "Maltiti",
+        comment: "Loved watching the stars at night.",
+        rating: 4.8,
+      },
+    ],
   },
   {
     name: "City Lights Penthouse",
     address: {
-      state: "New York",
-      city: "New York",
-      country: "USA"
+      state: "Savannah Region",
+      city: "Damongo",
+      country: "Ghana",
     },
     rating: 4.85,
     category: ["City View", "Free WiFi", "24h Checkin"],
@@ -68,17 +123,28 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
     offers: {
       bed: "2",
       shower: "2",
-      occupants: "2-4"
+      occupants: "2-4",
     },
-    image: "https://example.com/image4.jpg",
-    discount: "15"
+    image: img4.src,
+    discount: "15",
+    description:
+      "A luxurious penthouse in the heart of New York. Floor-to-ceiling windows give you panoramic views of the skyline and a modern living space.",
+    amenities: ["High-speed WiFi", "24h Concierge", "Rooftop Access", "Gym"],
+    reviews: [
+      {
+        user: "Yakubu",
+        comment: "The view of Manhattan is priceless.",
+        rating: 5,
+      },
+      { user: "Hawawu", comment: "Stylish and very clean.", rating: 4.7 },
+    ],
   },
   {
     name: "Riverside Cabin",
     address: {
       state: "Queenstown",
       city: "Otago",
-      country: "New Zealand"
+      country: "New Zealand",
     },
     rating: 4.77,
     category: ["Riverside", "Private Dock", "Free Kayaks"],
@@ -86,17 +152,33 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
     offers: {
       bed: "3",
       shower: "2",
-      occupants: "4-6"
+      occupants: "4-6",
     },
-    image: "https://example.com/image5.jpg",
-    discount: "20"
+    image: img5.src,
+    discount: "20",
+    description:
+      "Relax by the riverside in this peaceful cabin. Guests can kayak, fish, or enjoy a quiet evening by the water.",
+    amenities: [
+      "Private Dock",
+      "Kayaks Included",
+      "Fireplace",
+      "Outdoor Grill",
+    ],
+    reviews: [
+      {
+        user: "Fuseini",
+        comment: "Kayaking on the river was amazing.",
+        rating: 4.9,
+      },
+      { user: "Mariam", comment: "So calm and refreshing.", rating: 4.6 },
+    ],
   },
   {
     name: "Modern Beachfront Villa",
     address: {
       state: "Sidemen",
       city: "Bali",
-      country: "Indonesia"
+      country: "Indonesia",
     },
     rating: 4.95,
     category: ["Beachfront", "Private Pool", "Chef Service"],
@@ -104,17 +186,33 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
     offers: {
       bed: "5",
       shower: "4",
-      occupants: "8-10"
+      occupants: "8-10",
     },
-    image: "https://example.com/image6.jpg",
-    discount: ""
+    image: img6.src,
+    discount: "",
+    description:
+      "Luxury meets relaxation in this beachfront villa with a private pool. Guests enjoy chef service and direct beach access.",
+    amenities: [
+      "Private Chef",
+      "Infinity Pool",
+      "Beach Access",
+      "Air Conditioning",
+    ],
+    reviews: [
+      { user: "Alhassan", comment: "Best vacation of my life.", rating: 5 },
+      {
+        user: "Rahama",
+        comment: "The private chef was wonderful!",
+        rating: 4.8,
+      },
+    ],
   },
   {
     name: "Lakeside Chalet",
     address: {
       state: "Banff",
       city: "Alberta",
-      country: "Canada"
+      country: "Canada",
     },
     rating: 4.65,
     category: ["Lakeside", "Mountain View", "Hiking Trails"],
@@ -122,53 +220,69 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
     offers: {
       bed: "3",
       shower: "3",
-      occupants: "4-5"
+      occupants: "4-5",
     },
-    image: "https://example.com/image7.jpg",
-    discount: "10"
+    image: img7.src,
+    discount: "10",
   },
   {
     name: "Tropical Garden Villa",
     address: {
-      state: "Koh Samui",
-      city: "Surat Thani",
-      country: "Thailand"
+      state: "Greater Accra",
+      city: "Accra",
+      country: "Ghana",
     },
-    rating: 4.80,
+    rating: 4.8,
     category: ["Garden", "Free Parking", "Self Checkin"],
     price: 2750,
     offers: {
       bed: "3",
       shower: "3",
-      occupants: "5-6"
+      occupants: "5-6",
     },
-    image: "https://example.com/image8.jpg",
-    discount: "25"
+    image: img8.src,
+    discount: "25",
   },
   {
     name: "Urban Loft",
     address: {
       state: "Berlin",
       city: "Berlin",
-      country: "Germany"
+      country: "Germany",
     },
-    rating: 4.60,
+    rating: 4.6,
     category: ["City Center", "Free WiFi", "24h Checkin"],
     price: 2000,
     offers: {
       bed: "2",
       shower: "1",
-      occupants: "2-3"
+      occupants: "2-3",
     },
-    image: "https://example.com/image9.jpg",
-    discount: ""
+    image: img9.src,
+    discount: "",
+    description:
+      "Luxury meets relaxation in this beachfront villa with a private pool. Guests enjoy chef service and direct beach access.",
+    amenities: [
+      "Private Chef",
+      "Infinity Pool",
+      "Beach Access",
+      "Air Conditioning",
+    ],
+    reviews: [
+      { user: "Alhassan", comment: "Best vacation of my life.", rating: 5 },
+      {
+        user: "Rahama",
+        comment: "The private chef was wonderful!",
+        rating: 4.8,
+      },
+    ],
   },
   {
     name: "Secluded Forest Cabin",
     address: {
       state: "Whistler",
       city: "British Columbia",
-      country: "Canada"
+      country: "Canada",
     },
     rating: 4.72,
     category: ["Secluded", "Hot Tub", "Self Checkin"],
@@ -176,17 +290,33 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
     offers: {
       bed: "4",
       shower: "2",
-      occupants: "5-7"
+      occupants: "5-7",
     },
-    image: "https://example.com/image10.jpg",
-    discount: "40"
+    image: img10.src,
+    discount: "40",
+    description:
+      "Luxury meets relaxation in this beachfront villa with a private pool. Guests enjoy chef service and direct beach access.",
+    amenities: [
+      "Private Chef",
+      "Infinity Pool",
+      "Beach Access",
+      "Air Conditioning",
+    ],
+    reviews: [
+      { user: "Alhassan", comment: "Best vacation of my life.", rating: 5 },
+      {
+        user: "Rahama",
+        comment: "The private chef was wonderful!",
+        rating: 4.8,
+      },
+    ],
   },
   {
     name: "Cliffside Villa",
     address: {
-      state: "Amalfi",
-      city: "Salerno",
-      country: "Italy"
+      state: "Northern Region",
+      city: "Yendi",
+      country: "Ghana",
     },
     rating: 4.93,
     category: ["Cliffside", "Infinity Pool", "Sea View"],
@@ -194,17 +324,33 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
     offers: {
       bed: "4",
       shower: "4",
-      occupants: "6-8"
+      occupants: "6-8",
     },
-    image: "https://example.com/image11.jpg",
-    discount: "50"
+    image: img11.src,
+    discount: "50",
+    description:
+      "Luxury meets relaxation in this beachfront villa with a private pool. Guests enjoy chef service and direct beach access.",
+    amenities: [
+      "Private Chef",
+      "Infinity Pool",
+      "Beach Access",
+      "Air Conditioning",
+    ],
+    reviews: [
+      { user: "Alhassan", comment: "Best vacation of my life.", rating: 5 },
+      {
+        user: "Rahama",
+        comment: "The private chef was wonderful!",
+        rating: 4.8,
+      },
+    ],
   },
   {
     name: "Coastal Escape Villa",
     address: {
       state: "Noosa",
       city: "Queensland",
-      country: "Australia"
+      country: "Australia",
     },
     rating: 4.83,
     category: ["Beachfront", "Pet Friendly", "Free Parking"],
@@ -212,17 +358,33 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
     offers: {
       bed: "3",
       shower: "3",
-      occupants: "4-6"
+      occupants: "4-6",
     },
-    image: "https://example.com/image12.jpg",
-    discount: ""
+    image: img12.src,
+    discount: "",
+    description:
+      "Luxury meets relaxation in this beachfront villa with a private pool. Guests enjoy chef service and direct beach access.",
+    amenities: [
+      "Private Chef",
+      "Infinity Pool",
+      "Beach Access",
+      "Air Conditioning",
+    ],
+    reviews: [
+      { user: "Alhassan", comment: "Best vacation of my life.", rating: 5 },
+      {
+        user: "Rahama",
+        comment: "The private chef was wonderful!",
+        rating: 4.8,
+      },
+    ],
   },
   {
     name: "Historical Villa",
     address: {
       state: "Florence",
       city: "Tuscany",
-      country: "Italy"
+      country: "Italy",
     },
     rating: 4.67,
     category: ["Historical", "Free Breakfast", "Self Checkin"],
@@ -230,17 +392,33 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
     offers: {
       bed: "2",
       shower: "2",
-      occupants: "2-4"
+      occupants: "2-4",
     },
-    image: "https://example.com/image13.jpg",
-    discount: "35"
+    image: img13.src,
+    discount: "35",
+    description:
+      "Luxury meets relaxation in this beachfront villa with a private pool. Guests enjoy chef service and direct beach access.",
+    amenities: [
+      "Private Chef",
+      "Infinity Pool",
+      "Beach Access",
+      "Air Conditioning",
+    ],
+    reviews: [
+      { user: "Alhassan", comment: "Best vacation of my life.", rating: 5 },
+      {
+        user: "Rahama",
+        comment: "The private chef was wonderful!",
+        rating: 4.8,
+      },
+    ],
   },
   {
     name: "Downtown Apartment",
     address: {
       state: "Tokyo",
       city: "Tokyo",
-      country: "Japan"
+      country: "Japan",
     },
     rating: 4.81,
     category: ["City Center", "Free WiFi", "Public Transport"],
@@ -248,17 +426,33 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
     offers: {
       bed: "1",
       shower: "1",
-      occupants: "2"
+      occupants: "2",
     },
-    image: "https://example.com/image14.jpg",
-    discount: ""
+    image: img1.src,
+    discount: "",
+    description:
+      "Luxury meets relaxation in this beachfront villa with a private pool. Guests enjoy chef service and direct beach access.",
+    amenities: [
+      "Private Chef",
+      "Infinity Pool",
+      "Beach Access",
+      "Air Conditioning",
+    ],
+    reviews: [
+      { user: "Alhassan", comment: "Best vacation of my life.", rating: 5 },
+      {
+        user: "Rahama",
+        comment: "The private chef was wonderful!",
+        rating: 4.8,
+      },
+    ],
   },
   {
     name: "Luxury Safari Lodge",
     address: {
       state: "Serengeti",
       city: "Mara",
-      country: "Tanzania"
+      country: "Tanzania",
     },
     rating: 4.97,
     category: ["Safari", "Guided Tours", "Free Breakfast"],
@@ -266,17 +460,33 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
     offers: {
       bed: "4",
       shower: "4",
-      occupants: "6-8"
+      occupants: "6-8",
     },
-    image: "https://example.com/image15.jpg",
-    discount: "20"
+    image: img2.src,
+    discount: "20",
+    description:
+      "Luxury meets relaxation in this beachfront villa with a private pool. Guests enjoy chef service and direct beach access.",
+    amenities: [
+      "Private Chef",
+      "Infinity Pool",
+      "Beach Access",
+      "Air Conditioning",
+    ],
+    reviews: [
+      { user: "Alhassan", comment: "Best vacation of my life.", rating: 5 },
+      {
+        user: "Rahama",
+        comment: "The private chef was wonderful!",
+        rating: 4.8,
+      },
+    ],
   },
   {
     name: "Countryside Cottage",
     address: {
       state: "Cotswolds",
       city: "Gloucestershire",
-      country: "UK"
+      country: "UK",
     },
     rating: 4.58,
     category: ["Countryside", "Fireplace", "Self Checkin"],
@@ -284,17 +494,33 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
     offers: {
       bed: "2",
       shower: "1",
-      occupants: "2-4"
+      occupants: "2-4",
     },
-    image: "https://example.com/image16.jpg",
-    discount: "25"
+    image: img3.src,
+    discount: "25",
+    description:
+      "Luxury meets relaxation in this beachfront villa with a private pool. Guests enjoy chef service and direct beach access.",
+    amenities: [
+      "Private Chef",
+      "Infinity Pool",
+      "Beach Access",
+      "Air Conditioning",
+    ],
+    reviews: [
+      { user: "Alhassan", comment: "Best vacation of my life.", rating: 5 },
+      {
+        user: "Rahama",
+        comment: "The private chef was wonderful!",
+        rating: 4.8,
+      },
+    ],
   },
   {
     name: "Riverfront Mansion",
     address: {
       state: "Paris",
       city: "Île-de-France",
-      country: "France"
+      country: "France",
     },
     rating: 4.86,
     category: ["Riverfront", "Private Garden", "Self Checkin"],
@@ -302,17 +528,33 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
     offers: {
       bed: "4",
       shower: "3",
-      occupants: "6-8"
+      occupants: "6-8",
     },
-    image: "https://example.com/image17.jpg",
-    discount: "30"
+    image: img4.src,
+    discount: "30",
+    description:
+      "Luxury meets relaxation in this beachfront villa with a private pool. Guests enjoy chef service and direct beach access.",
+    amenities: [
+      "Private Chef",
+      "Infinity Pool",
+      "Beach Access",
+      "Air Conditioning",
+    ],
+    reviews: [
+      { user: "Alhassan", comment: "Best vacation of my life.", rating: 5 },
+      {
+        user: "Rahama",
+        comment: "The private chef was wonderful!",
+        rating: 4.8,
+      },
+    ],
   },
   {
     name: "Ski Chalet",
     address: {
       state: "Zermatt",
       city: "Valais",
-      country: "Switzerland"
+      country: "Switzerland",
     },
     rating: 4.75,
     category: ["Mountain View", "Ski Access", "Fireplace"],
@@ -320,17 +562,17 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
     offers: {
       bed: "3",
       shower: "3",
-      occupants: "4-5"
+      occupants: "4-5",
     },
-    image: "https://example.com/image18.jpg",
-    discount: ""
+    image: img5.src,
+    discount: "",
   },
   {
     name: "Island Paradise Villa",
     address: {
       state: "Mahe",
       city: "Victoria",
-      country: "Seychelles"
+      country: "Seychelles",
     },
     rating: 4.98,
     category: ["Beachfront", "Private Pool", "Chef Service"],
@@ -338,17 +580,33 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
     offers: {
       bed: "5",
       shower: "5",
-      occupants: "8-10"
+      occupants: "8-10",
     },
-    image: "https://example.com/image19.jpg",
-    discount: "60"
+    image: img6.src,
+    discount: "60",
+    description:
+      "Luxury meets relaxation in this beachfront villa with a private pool. Guests enjoy chef service and direct beach access.",
+    amenities: [
+      "Private Chef",
+      "Infinity Pool",
+      "Beach Access",
+      "Air Conditioning",
+    ],
+    reviews: [
+      { user: "Alhassan", comment: "Best vacation of my life.", rating: 5 },
+      {
+        user: "Rahama",
+        comment: "The private chef was wonderful!",
+        rating: 4.8,
+      },
+    ],
   },
   {
     name: "Clifftop Retreat",
     address: {
       state: "Cape Town",
       city: "Western Cape",
-      country: "South Africa"
+      country: "South Africa",
     },
     rating: 4.78,
     category: ["Ocean View", "Private Pool", "Self Checkin"],
@@ -356,9 +614,25 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
     offers: {
       bed: "3",
       shower: "3",
-      occupants: "4-5"
+      occupants: "4-5",
     },
-    image: "https://example.com/image20.jpg",
-    discount: ""
-  }
+    image: img7.src,
+    discount: "",
+    description:
+      "Luxury meets relaxation in this beachfront villa with a private pool. Guests enjoy chef service and direct beach access.",
+    amenities: [
+      "Private Chef",
+      "Infinity Pool",
+      "Beach Access",
+      "Air Conditioning",
+    ],
+    reviews: [
+      { user: "Alhassan", comment: "Best vacation of my life.", rating: 5 },
+      {
+        user: "Rahama",
+        comment: "The private chef was wonderful!",
+        rating: 4.8,
+      },
+    ],
+  },
 ];
